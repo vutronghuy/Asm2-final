@@ -1,0 +1,38 @@
+body{
+  background-color: rgb(215, 108, 117) !important;
+}
+#product-image {
+  width: 278px;
+  height: 230px;
+  border-radius: 5px;
+  /* height: 200px; */
+
+}
+
+.product-container {
+  width: 280px !important;
+  border: 1px solid black !important;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  background-color: #ffc4c4 !important;
+  padding-left: 0 !important;
+}
+
+/* ----------------------------------------------------- */
+.card-info{
+  position: relative;
+  height: 160px;
+  
+}
+
+.card-button {
+  align-items: center;
+  text-align: center;
+
+}
+.cate-product{
+  color: rgb(26, 27, 27);
+  text-align: center;
+  font-size: 40px;
+}
+
