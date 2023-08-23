@@ -5,7 +5,9 @@
     <div class="row">
         {{#each neft}}
         <div class="card product-container ">
+            <a href="/neft/detail/{{ _id }}">
             <img class="" id="product-image" src="{{ image }}">
+            </a>
             <div class="card-body card-info">
                 <div class="card-text">
                     {{ name }}
@@ -33,7 +35,9 @@
     <div class="row">
         {{#each lego }}
         <div class="card product-container">
+            <a href="/lego/detail/{{ _id }}">
             <img class="" id="product-image" src="{{ image }}">
+            </a>
             <div class="card-body card-info">
                 <div class="card-text">
                     {{ name }}

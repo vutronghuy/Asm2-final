@@ -45,6 +45,12 @@ router.post('/search', async (req, res) => {
     res.render('search-result', { lego, neft });
 })
 
+router.get('/detail/:id', async (req, res) => {
+    var id = req.params.id;
+    var lego = await LegoModel.findById(id);
+    //render ra file "views/mobile/detail.hbs"
+    res.render('lego/detail', { lego });
+ })
 
 
 module.exports = router; 
