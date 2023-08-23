@@ -1,7 +1,6 @@
 <div class="container">
     <div class="row">
-
-        {{#each products }}
+        {{#each lego }}
         <div class="card product-container">
             <img class="" id="product-image" src="{{ image }}">
             <div class="card-body card-info">
@@ -17,16 +16,16 @@
                 </div>
                 <div class="card-button">
                     <a class="btn btn-warning " style="background-color:rgb(178, 233, 206); border: 2px solid black;"
-                        href="/product/edit/{{ _id }}">Edit</a>
+                        href="/lego/edit/{{ _id }}">Edit</a>
                     <a class="btn btn-danger" style="background-color: rgb(110, 207, 242); border: 2px solid black;"
-                        href="/product/delete/{{ _id }}"
+                        href="/lego/delete/{{ _id }}"
                         onclick="return confirm('Are you sure to delete this product ?');">Delete</a>
                 </div>
             </div>
         </div>
         {{/each}}
 
-        {{#each nefts }}
+        {{#each neft }}
         <div class="card product-container">
             <img class="" id="product-image" src="{{ image }}">
             <div class="card-body card-info">

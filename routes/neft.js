@@ -1,12 +1,11 @@
 var express = require('express');
 const NeftModel = require('../models/NeftModel');
-const ProductModel = require('../models/ProductModel');
-const CategoryModel = require('../models/CategoryModel');
+const LegoModel = require('../models/LegoModel');
 var router = express.Router();
 
 router.get('/', async (req, res) => {
-    var nefts = await NeftModel.find();
-    res.render('neft/neftList', { nefts: nefts });
+    var neft = await NeftModel.find();
+    res.render('neft/list', { neft });
 })
 //: để hiện id
 router.get('/delete/:id', async (req, res) => {
@@ -17,32 +16,37 @@ router.get('/delete/:id', async (req, res) => {
     res.redirect('/neft');
 })
 
+//----------------------------------------------------------------
+
 router.get('/add', async (req, res) => {
-    res.render('neft/neftAdd');
+    res.render('neft/add');
 })
+
 router.post('/add', async (req, res) => {
-    await NeftModel.create(req.body);
-    await CategoryModel.create(req.body);
+    const neft = await NeftModel.create(req.body);
+    console.log(neft);
     res.redirect('/neft');
 })
+
+//----------------------------------------------------------------
 
 router.get('/edit/:id', async (req, res) => {
     var id = req.params.id;
     var neft = await NeftModel.findById(id);
-    res.render('neft/neftEdit', { neft: neft });
+    res.render('neft/edit', { neft });
 })
 router.post('/edit/:id', async (req, res) => {
     await NeftModel.findByIdAndUpdate(req.params.id, req.body)
         .then(() => console.log("edit successfully!"))
-        .catch(() => consolr.log("edit failed"));
+        .catch(() => console.log("edit failed"));
     res.redirect('/neft');
 
 })
 router.post('/search', async (req, res) => {
     var keyword = req.body.keyword;
-    var products = await ProductModel.find({ name: new RegExp(keyword, "i") })
-    var nefts = await NeftModel.find({ name: new RegExp(keyword, "i") })
-    res.render('search-result', { products, nefts });
+    var lego = await LegoModel.find({ name: new RegExp(keyword, "i") })
+    var neft = await NeftModel.find({ name: new RegExp(keyword, "i") })
+    res.render('search-result', { lego, neft });
 })
 
 module.exports = router; 

@@ -5,12 +5,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+// var usersRouter = require('./routes/users');
 // var homeRouter = require('./routes/home');
 var app = express();
 
 // khai báo router
-var productRouter = require('./routes/product');
+var legoRouter = require('./routes/lego');
 var neftRouter = require('./routes/neft');
 var app = express();
 
@@ -41,8 +41,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/product', productRouter );
+// app.use('/users', usersRouter);
+app.use('/lego', legoRouter );
 app.use('/neft', neftRouter);
 // app.use('/home', homeRouter);
 // catch 404 and forward to error handler

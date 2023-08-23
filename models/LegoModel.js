@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 //Schema: khai báo, định nghĩa cấu trúc của bảng (tên các cột và kiểu dữ liệu tương ứng)
-var ProductSchema  = mongoose.Schema(
+var LegoSchema  = mongoose.Schema(
     {
         name : String,
         age : Number,
@@ -12,5 +12,5 @@ var ProductSchema  = mongoose.Schema(
 
     }
 )
-const ProductModel = mongoose.model('lego', ProductSchema, 'lego');
-module.exports = ProductModel;
+const LegoModel = mongoose.model('lego', LegoSchema, 'lego');
+module.exports = LegoModel;

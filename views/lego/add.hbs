@@ -4,10 +4,10 @@
 <div class="container col-md-8 mt-3 mb-3 card bg-light">
 
   <div>
-    <form action="/neft/add" method="post">
-      <h1 class="text text-danger">Add New Nerf</h1>
+    <form action="/lego/add" method="post">
+      <h1 class="text text-danger">Add New Lego</h1>
       <div class="form-group">
-        <label class="h5 text text-success" for="">Full name</label>
+        <label class="h5 text text-success">Full name</label>
         <input class="form-control" type="text" , name="name" required>
       </div>
       <div class="form-group">
@@ -26,13 +26,13 @@
         <label class="h5 text text-success" for="">Des</label>
         <input class="form-control" type="text" , name="des" required>
       </div>
-      <div class="form-group">
+      {{!-- <div class="form-group">
         <label class="h5 text text-success" for="">Category</label>
         <select class="form-control" name="name" id="">
-          <option value="Nerf">Nerf</option>
           <option value="Lego">Lego</option>
+          <option value="Nerf">Nerf</option>
         </select>
-      </div>
+      </div> --}}
       <div class="form-group">
         <label class="h5 text text-success" for="">Price</label>
         <input class="form-control" type="text" , name="price" required>
