@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        {{#each lego }}
+        <div class="card product-container">
+            <img class="" id="product-image" src="{{ image }}">
+            <div class="card-body card-info">
+                <div class="card-text">
+                    {{ name }}
+                </div>
+                <div class="card-text"> Lego: {{ sku }} </div>
+                <div class="card-age">
+                    Ages: {{ age }} years and up
+                </div>
+                <div class="card-price">
+                    ${{ price }}
+                </div>
+                <div class="card-button">
+                    <a class="btn btn-warning " style="background-color:rgb(178, 233, 206); border: 2px solid black;"
+                        href="/lego/edit/{{ _id }}">Edit</a>
+                    <a class="btn btn-danger" style="background-color: rgb(110, 207, 242); border: 2px solid black;"
+                        href="/lego/delete/{{ _id }}"
+                        onclick="return confirm('Are you sure to delete this product ?');">Delete</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        {{#each neft }}
+        <div class="card product-container">
+            <img class="" id="product-image" src="{{ image }}">
+            <div class="card-body card-info">
+                <div class="card-text">
+                    {{ name }}
+                </div>
+                <div class="card-text"> Lego: {{ sku }} </div>
+                <div class="card-age">
+                    Ages: {{ age }} years and up
+                </div>
+                <div class="card-price">
+                    ${{ price }}
+                </div>
+                <div class="card-button">
+                    <a class="btn btn-warning " style="background-color:rgb(178, 233, 206); border: 2px solid black;"
+                        href="/neft/edit/{{ _id }}">Edit</a>
+                    <a class="btn btn-danger" style="background-color: rgb(110, 207, 242); border: 2px solid black;"
+                        href="/neft/delete/{{ _id }}"
+                        onclick="return confirm('Are you sure to delete this product ?');">Delete</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

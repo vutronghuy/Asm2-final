@@ -2,15 +2,19 @@ body{
   background-color: #dc354547 !important;
 }
 #product-image {
-  width: 278px;
-  height: 230px;
+  width: 288px;
+  height: 260px;
   border-radius: 5px;
-  /* height: 200px; */
+  transition: 1s;
 
+}
+#product-image:hover{
+transform: scale(0.9);
+z-index: 2;
 }
 
 .product-container {
-  width: 280px !important;
+  width: 290px !important;
   border: 1px solid black !important;
   margin-left: 20px;
   margin-bottom: 20px;

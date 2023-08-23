@@ -52,5 +52,17 @@ router.get('/detail/:id', async (req, res) => {
     res.render('lego/detail', { lego });
  })
 
+//  router.get('/sort/name/asc', async (req, res) => {
+//     var lego = await LegoModel.find().sort({ name: 1 });
+//     var neft = await NeftModel.find().sort({ name: 1 });
+//     res.render('name-result', { lego, neft });
+//  })
+ 
+//  router.get('/sort/name/desc', async (req, res) => {
+//     var lego = await LegoModel.find().sort({ name: -1 });
+//     var neft = await NeftModel.find().sort({ name: -1 });
+//     res.render('name-result', { lego, neft });
+//  })
+
 
 module.exports = router; 
