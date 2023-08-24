@@ -6,6 +6,7 @@ var router = express.Router();
 router.get('/', async (req, res) => {
     var lego = await LegoModel.find();
     res.render('lego/list', { lego });
+    // res.send(lego);
 })
 //: để hiện id
 router.get('/delete/:id', async (req, res) => {
@@ -29,13 +30,14 @@ router.get('/edit/:id', async (req, res) => {
     var id = req.params.id;
     var lego = await LegoModel.findById(id);
     res.render('lego/edit', { lego });
-
+    // res.send(lego);
 })
 router.post('/edit/:id', async (req, res) => {
     await LegoModel.findByIdAndUpdate(req.params.id, req.body)
     .then(() => console.log("edit successfully!"))
     .catch(() => console.log("edit failed"));
     res.redirect('/lego');
+    
     
 })
 router.post('/search', async (req, res) => {

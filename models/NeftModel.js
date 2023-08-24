@@ -8,7 +8,9 @@ var NeftSchema  = mongoose.Schema(
         sku : Number,
         image : String, 
         des : String,
-        price : Number
+        price : Number,
+        NSX : Date,
+        best : String
 
     }
 )
