@@ -9,8 +9,7 @@ var LegoSchema  = mongoose.Schema(
         image : String, 
         des : String,
         price : Number,
-        NSX : Date,
-        best : String
+        NSX : Date
     }
 )
 const LegoModel = mongoose.model('lego', LegoSchema, 'lego');

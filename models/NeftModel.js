@@ -9,9 +9,7 @@ var NeftSchema  = mongoose.Schema(
         image : String, 
         des : String,
         price : Number,
-        NSX : Date,
-        best : String
-
+        NSX : Date
     }
 )
 const NeftModel = mongoose.model('neft', NeftSchema, 'neft');

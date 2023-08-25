@@ -30,7 +30,7 @@ router.get('/edit/:id', async (req, res) => {
     var id = req.params.id;
     var lego = await LegoModel.findById(id);
     res.render('lego/edit', { lego });
-    // res.send(lego);
+    res.send(lego); 
 })
 router.post('/edit/:id', async (req, res) => {
     await LegoModel.findByIdAndUpdate(req.params.id, req.body)
